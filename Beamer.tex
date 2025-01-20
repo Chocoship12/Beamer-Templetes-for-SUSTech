@@ -1,0 +1,46 @@
+\documentclass{beamer}
+\usepackage{graphicx}  % 用于插入图片
+\usepackage{tikz}      % 用于自定义背景图像
+\usepackage{xcolor}     % 用于设置颜色
+
+\definecolor{SUSTechOrange}{RGB}{237,108,000}
+
+\setbeamercolor{frametitle}{fg=white, bg=SUSTechOrange}  % 设置标题框背景为蓝色，文字为白色
+\setbeamercolor{title}{fg=white, bg=SUSTechOrange}    % 设置首页标题框背景为黄色，文字为黑色
+\setbeamercolor{itemize item}{fg=red}          % 设置 itemize 列表的符号颜色为红色
+\setbeamercolor{block title}{fg=white, bg=purple} % 设置块标题颜色
+\setbeamercolor{block body}{bg=lightgray}      % 设置块内容的背景颜色
+
+
+% \usefonttheme{professionalfonts}
+% \usepackage{helvet}
+% \renewcommand{\familydefault}{\sfdefault}
+
+\setmainfont{Comic Sans MS}
+
+\title{Lecture Title}
+\author{Chocolate Ship}
+\date{\today}
+
+% 设置背景图
+\setbeamertemplate{background}{
+    \begin{tikzpicture}[remember picture, overlay]
+        % 将图片放置在页面的左下角
+        \node[anchor=south west, xshift=0.2cm, yshift=0.2cm, opacity=1] 
+        at (current page.south west) 
+        {\includegraphics[width=3cm]{SUSTech_Logo_1.pdf}};
+    \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{About Me}
+    This is a templete of SUSTech.
+\end{frame}
+
+\end{document}
